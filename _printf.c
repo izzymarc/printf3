@@ -1,11 +1,14 @@
-#include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
 
-void print_buffer(char buffer[], int *buff_ind);
+#define BUFF_SIZE 1024
 
 /**
- * _printf - Printf function
- * @format: format.
- * Return: Printed chars.
+ * _printf - Custom implementation of printf function
+ * @format: Format string
+ * @...: Variable number of arguments
+ *
+ * Return: Number of characters printed (excluding null byte)
  */
 int _printf(const char *format, ...)
 {
@@ -37,8 +40,7 @@ int _printf(const char *format, ...)
 			precision = exactCalculationUnit(format, &i, list);
 			size = dimensionDetective(format, &i);
 			++i;
-			printed = outputMaestro(format, &i, list, buffer,
-										flags, width, precision, size);
+			printed = outputMaestro(format, &i, list, buffer, flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
