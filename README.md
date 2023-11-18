@@ -1,53 +1,41 @@
-# CustomPrintf
-
-Welcome to CustomPrintf, an innovative C library dedicated to providing a custom implementation of the classic `printf` function.
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
+# Printf Project
 
 ## Introduction
 
-The `printf` function in C is a powerful tool for formatted output, but CustomPrintf takes it to the next level. With CustomPrintf, you can customize and extend the functionality of formatted string output, allowing for more control and versatility in your C programs.
+This project is a part of the ALX Software Engineering track and is the first project undertaken by [Ugo Ogadi](https://github.com/thisislaait) and [Ntokozo Vilakazi].
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Contributors](#contributors)
 
 ## Features
 
-- Custom format specifiers: Define your own format specifiers for specialized output.
-- Extended functionality: Extend the capabilities of the standard `printf` function.
-- Easy to integrate: Simply include the CustomPrintf library in your C project.
+- Basic support for standard conversion specifiers (`c`, `s`, `%`).
+- Handling of integer conversion specifiers (`d`, `i`).
+- Implementation of unsigned integer conversion specifiers (`u`, `o`, `x`, `X`).
+- Custom conversion specifiers:
+  - `S` for printing strings with non-printable characters.
+  - `r` for printing reversed strings.
+  - `R` for printing ROT13'ed strings..
+- Additional formatting options:
+  - `-` for left-justifying output.
+  - `+`, `space`, `#`, and `0` for various formatting options.
 
-## Getting Started
+## Project Structure
 
-To get started with CustomPrintf, follow these steps:
+The project is organized into the following files:
 
-1. Clone the CustomPrintf repository.
-2. Include the CustomPrintf library in your C project.
-3. Customize and experiment with format specifiers to achieve the desired output.
+- `main.h`: Header file containing function prototypes.
+- `_printf.c`: Main implementation of the printf function.
+- `_putchar.c`: Implementation of the _putchar function.
+- `print_char.c`, `print_str.c`, ...: Files containing the implementation of various print functions.
+- `buffer_handling.c`: File handling buffer operations.
+- `main.c`: Main file for testing the printf function.
 
-## Usage
+## Contributors
 
-To use the CustomPrintf, include the `custom_printf.h` header file in your C program. This header provides access to the extended `custom_printf` function.
-
-```c
-#include is  "custom_printf.h"
-
-int main() {
-    // Custom format specifier
-    custom_printf("Custom format specifier: %c\n", 'A');
-
-    // Extended functionality
-    int number = 42;
-    custom_printf("Custom decimal format: %D\n", number);
-
-    return 0;
-}
-In this example, we use a custom format specifier %D to print the decimal representation of an integer, demonstrating the extended functionality of CustomPrintf.
-
-Contributing
-CustomPrintf is an open-source project, and we welcome contributions from the community. If you have ideas for new features, improvements, or bug fixes, please submit a pull request or open an issue on our GitHub repository.
-
-
+- [Ugo Ogadi](https://github.com/thisislaait)
+- [Ntokozo Vilakazi]
